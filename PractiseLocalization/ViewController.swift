@@ -10,7 +10,7 @@ import UIKit
 import Localize_Swift
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mySegentController: UISegmentedControl!
     
@@ -28,12 +28,12 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setText()
     }
-
+    
     //setting the text for label and button
     @objc func setText() {
         titleLabel.text = "Hello".localized()
@@ -44,14 +44,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-//changing language using segmented controller
+    //changing language using segmented controller
     @IBAction func changeLanguageBySegmentController(_ sender: Any) {
         switch mySegentController.selectedSegmentIndex {
         case 0:
             Localize.setCurrentLanguage(availableLanguages[0])
             break
         case 1:
-            Localize.setCurrentLanguage(availableLanguages[0])
+            Localize.setCurrentLanguage(availableLanguages[1])
             break
         default:
             Localize.setCurrentLanguage(availableLanguages[1])
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     //changing language using button
-
+    
     @IBAction func changedLanguageWithButton(_ sender: Any) {
         let actionSheet = UIAlertController(title: nil, message: "Switch Language", preferredStyle: UIAlertControllerStyle.actionSheet)
         for language in availableLanguages {
