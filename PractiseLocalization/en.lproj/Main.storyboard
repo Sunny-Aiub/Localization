@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PractiseLocalization" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VA-1A-Dxp">
+                                <rect key="frame" x="0.0" y="80" width="375" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="x0r-t9-VI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsh-PU-hWs">
+                                <rect key="frame" x="164.5" y="259.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="changedLanguageWithButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kiA-fo-XYK"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Mj-tf-iAR">
+                                <rect key="frame" x="127" y="319.5" width="121" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeLanguageBySegmentController:" destination="BYZ-38-t0r" eventType="valueChanged" id="Wqh-7N-W77"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2VA-1A-Dxp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="1ta-Yo-7IS"/>
+                            <constraint firstItem="2VA-1A-Dxp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9Cc-mM-Xqj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lsh-PU-hWs" secondAttribute="trailing" id="Oh4-iD-GPZ"/>
+                            <constraint firstItem="8Mj-tf-iAR" firstAttribute="top" secondItem="lsh-PU-hWs" secondAttribute="bottom" constant="30" id="RqA-Aj-zRU"/>
+                            <constraint firstItem="8Mj-tf-iAR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XRG-ua-m8a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2VA-1A-Dxp" secondAttribute="trailing" id="YYk-M0-dxN"/>
+                            <constraint firstItem="lsh-PU-hWs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bSz-xd-wOU"/>
+                            <constraint firstItem="8Mj-tf-iAR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jOg-Df-2tJ"/>
+                            <constraint firstItem="lsh-PU-hWs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yOi-Sz-CvM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="changeButton" destination="lsh-PU-hWs" id="5yW-8t-Ew2"/>
+                        <outlet property="mySegentController" destination="8Mj-tf-iAR" id="QHO-7I-avQ"/>
+                        <outlet property="titleLabel" destination="2VA-1A-Dxp" id="V0P-O0-TcH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="116"/>
+        </scene>
+    </scenes>
+</document>
